@@ -49,23 +49,26 @@ export default function Home() {
       </section>
       <section>
         <h2 className="text-2xl font-semibold mb-2">Visitor Counter</h2>
-        <p className="text-gray-500">
-          Visitors: <span id="counter">Loading...</span>
-        </p>
       </section>
-
       <section className="mt-10">
         <VisitorCounter />
       </section>
-      <footer className="mt-12 text-sm text-gray-500">
-        <p className="text-gray-500">
-          Built with AWS • Terraform • GitHub Actions
-        </p>
-        <img
-          src="https://img.shields.io/github/actions/workflow/status/ajaypaulfrancis/cloud_portfolio/deploy-frontend.yml?label=Deploy&timestamp=true"
-          alt="Deployment status"
-        />
+      <footer className="mt-12 text-sm text-gray-500 flex items-center gap-2">
+        <span>Deployment status:</span>
+
+        <a
+          href="https://github.com/ajaypaulfrancis/cloud_portfolio/actions/workflows/deploy-frontend.yml"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://github.com/ajaypaulfrancis/cloud_portfolio/actions/workflows/deploy-frontend.yml/badge.svg"
+            alt="Deploy Frontend status"
+            className="h-5"
+          />
+        </a>
       </footer>
+
 
     </main>
 
