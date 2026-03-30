@@ -58,6 +58,9 @@ export default function Home() {
         <VisitorCounter />
       </section>
       <footer className="mt-12 text-sm text-gray-500">
+        <p className="text-gray-500">
+          Built with AWS • Terraform • GitHub Actions
+        </p>
         <img
           src="https://img.shields.io/github/actions/workflow/status/ajaypaulfrancis/cloud_portfolio/deploy-frontend.yml?label=Deploy&timestamp=true"
           alt="Deployment status"
