@@ -7,12 +7,12 @@ export default function Home() {
       <section className="mb-8">
         <h1 className="text-4xl font-bold">Ajay Paul</h1>
         <p className="text-lg text-gray-600">
-          Cloud | DevOps | Automation Senior Engineer
+          Cloud | DevOps | Automation
         </p>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">About</h2>
+        <h2 className="text-2xl font-semibold mb-2">About me</h2>
         <p>
           Senior DevOps and Cloud Engineer with experience designing,
           automating, and operating secure, scalable platforms across
