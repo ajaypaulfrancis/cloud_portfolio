@@ -7,7 +7,7 @@ export default function Home() {
       <section className="mb-8">
         <h1 className="text-4xl font-bold">Ajay Paul</h1>
         <p className="text-lg text-gray-600">
-          Cloud • DevOps • Automation Engineer
+          Cloud | DevOps | Automation Senior Engineer
         </p>
       </section>
 
@@ -61,12 +61,17 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
+
           <img
-            src="https://github.com/ajaypaulfrancis/cloud_portfolio/actions/workflows/deploy-frontend.yml/badge.svg"
+            src="https://img.shields.io/github/actions/workflow/status/ajaypaulfrancis/cloud_portfolio/deploy-frontend.yml?label=Deploy&timestamp=true"
             alt="Deploy Frontend status"
             className="h-5"
           />
         </a>
+        <p className="text-gray-500">
+          ————————————————————
+          Built with AWS • Terraform • GitHub Actions • Next.JS
+        </p>
       </footer>
 
 
