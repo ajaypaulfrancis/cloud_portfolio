@@ -1,4 +1,6 @@
 import Image from "next/image";
+import VisitorCounter from "@/components/VisitorCounter"
+
 export default function Home() {
   return (
     <main className="max-w-3xl mx-auto p-6">
@@ -51,6 +53,19 @@ export default function Home() {
           Visitors: <span id="counter">Loading...</span>
         </p>
       </section>
+
+      <section className="mt-10">
+        <VisitorCounter />
+      </section>
+      <footer className="mt-12 text-sm text-gray-500 flex items-center gap-2">
+        <span>Deployment status:</span>
+        <img
+          src="https://github.com/ajaypaulfrancis/cloud_portfolio/actions/workflows/deploy-frontend.yml/badge.svg"
+          alt="GitHub Actions Deploy Status"
+        />
+      </footer>
+      ``
     </main>
+
   );
 }
