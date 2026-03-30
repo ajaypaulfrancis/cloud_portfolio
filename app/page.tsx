@@ -68,10 +68,13 @@ export default function Home() {
             className="h-5"
           />
         </a>
-        <p className="text-gray-500">
-          ————————————————————
-          Built with AWS • Terraform • GitHub Actions • Next.JS
-        </p>
+        <section>
+          <p className="text-gray-500">
+            ————————————————————
+            Built with AWS • Terraform • GitHub Actions • Next.JS
+          </p>
+        </section>
+
       </footer>
 
 
