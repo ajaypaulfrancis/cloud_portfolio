@@ -57,14 +57,13 @@ export default function Home() {
       <section className="mt-10">
         <VisitorCounter />
       </section>
-      <footer className="mt-12 text-sm text-gray-500 flex items-center gap-2">
-        <span>Deployment status:</span>
+      <footer className="mt-12 text-sm text-gray-500">
         <img
-          src="https://github.com/ajaypaulfrancis/cloud_portfolio/actions/workflows/deploy-frontend.yml/badge.svg"
-          alt="GitHub Actions Deploy Status"
+          src="https://img.shields.io/github/actions/workflow/status/ajaypaulfrancis/cloud_portfolio/deploy-frontend.yml?label=Deploy&timestamp=true"
+          alt="Deployment status"
         />
       </footer>
-      ``
+
     </main>
 
   );
