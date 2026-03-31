@@ -1,5 +1,5 @@
 import Image from "next/image";
-import VisitorCounter from "@/components/VisitorCounter"
+import VisitorCounter from "@/components/VisitorCounter";
 
 export default function Home() {
   return (
@@ -53,28 +53,28 @@ export default function Home() {
       <section className="mt-10">
         <VisitorCounter />
       </section>
-      <footer className="mt-12 text-sm text-gray-500 flex items-center gap-2">
-        <span>Deployment status:</span>
+      <footer className="mt-12 text-sm text-gray-500">
+        <div className="flex items-center gap-2">
+          <span>Deployment status:</span>
 
-        <a
-          href="https://github.com/ajaypaulfrancis/cloud_portfolio/actions/workflows/deploy-frontend.yml"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <a
+            href="https://github.com/ajaypaulfrancis/cloud_portfolio/actions/workflows/deploy-frontend.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://github.com/ajaypaulfrancis/cloud_portfolio/actions/workflows/deploy-frontend.yml/badge.svg"
+              alt="Deploy Frontend status"
+              width={110}
+              height={20}
+              className="h-5 w-auto"
+            />
+          </a>
+        </div>
 
-          <img
-            src="https://img.shields.io/github/actions/workflow/status/ajaypaulfrancis/cloud_portfolio/deploy-frontend.yml?label=Deploy&timestamp=true"
-            alt="Deploy Frontend status"
-            className="h-5"
-          />
-        </a>
-        <section>
-          <p className="text-gray-500">
-            ————————————————————
-            Built with AWS • Terraform • GitHub Actions • Next.JS
-          </p>
-        </section>
-
+        <p className="mt-2 text-gray-500">
+          Built with AWS • Terraform • GitHub Actions • Next.js
+        </p>
       </footer>
 
 
