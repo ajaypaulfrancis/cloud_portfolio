@@ -9,6 +9,7 @@ resource "aws_cloudfront_distribution" "site" {
   enabled         = true
   is_ipv6_enabled = true
   aliases         = [var.domain_name]
+  price_class     = "PriceClass_100"
 
   depends_on = [
     aws_acm_certificate.cert
@@ -19,6 +20,8 @@ resource "aws_cloudfront_distribution" "site" {
     domain_name              = aws_s3_bucket.site.bucket_regional_domain_name
     origin_id                = "s3-origin"
     origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
+
+
   }
 
   default_cache_behavior {
@@ -72,3 +75,4 @@ resource "aws_s3_bucket_policy" "site" {
   bucket = aws_s3_bucket.site.id
   policy = data.aws_iam_policy_document.s3_policy.json
 }
+
