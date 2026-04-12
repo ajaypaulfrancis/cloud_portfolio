@@ -161,9 +161,9 @@ export default function Home() {
           <div className="hidden sm:flex gap-6 text-sm text-gray-400">
             <a href="#about" className="hover:text-cyan-400 transition-colors">About</a>
             <a href="#certifications" className="hover:text-cyan-400 transition-colors">Certifications</a>
-            <a href="#experience" className="hover:text-cyan-400 transition-colors">Experience</a>
-            <a href="#skills" className="hover:text-cyan-400 transition-colors">Skills</a>
             <a href="#projects" className="hover:text-cyan-400 transition-colors">Projects</a>
+            <a href="#skills" className="hover:text-cyan-400 transition-colors">Skills</a>
+            <a href="#experience" className="hover:text-cyan-400 transition-colors">Experience</a>
           </div>
           <a
             href="mailto:aj@ajpaul.cloud"
@@ -251,62 +251,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience */}
-      <section id="experience" className="max-w-5xl mx-auto px-6 py-12 border-t border-gray-800">
-        <h2 className="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-8">Experience</h2>
-        <div className="flex flex-col gap-10">
-          {experience.map((job) => (
-            <div key={job.title + job.period} className="flex gap-6">
-              <div className="flex flex-col items-center">
-                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
-                <div className="w-px flex-1 bg-gray-800 mt-2" />
-              </div>
-              <div className="pb-6 flex-1">
-                <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{job.title}</h3>
-                    <p className="text-cyan-400 text-sm">{job.company}</p>
-                  </div>
-                  <span className="text-xs text-gray-500 font-mono bg-gray-900 px-3 py-1 rounded-full border border-gray-800">
-                    {job.period}
-                  </span>
-                </div>
-                <ul className="space-y-2">
-                  {job.highlights.map((h, i) => (
-                    <li key={i} className="text-gray-400 text-sm leading-relaxed flex gap-2">
-                      <span className="text-cyan-600 mt-1 shrink-0">▸</span>
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section id="skills" className="max-w-5xl mx-auto px-6 py-12 border-t border-gray-800">
-        <h2 className="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-8">Skills</h2>
-        <div className="flex flex-col gap-6">
-          {skillCategories.map((cat) => (
-            <div key={cat.name} className="flex flex-col sm:flex-row gap-3 sm:items-start">
-              <p className="text-xs text-gray-500 font-mono w-52 shrink-0 mt-1">{cat.name}</p>
-              <div className="flex flex-wrap gap-2">
-                {cat.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className={`text-xs font-medium px-3 py-1.5 rounded-full ${cat.color}`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Projects */}
       <section id="projects" className="max-w-5xl mx-auto px-6 py-12 border-t border-gray-800">
         <h2 className="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-8">Projects</h2>
@@ -336,6 +280,62 @@ export default function Home() {
                     {tag}
                   </span>
                 ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="max-w-5xl mx-auto px-6 py-12 border-t border-gray-800">
+        <h2 className="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-8">Skills</h2>
+        <div className="flex flex-col gap-6">
+          {skillCategories.map((cat) => (
+            <div key={cat.name} className="flex flex-col sm:flex-row gap-3 sm:items-start">
+              <p className="text-xs text-gray-500 font-mono w-52 shrink-0 mt-1">{cat.name}</p>
+              <div className="flex flex-wrap gap-2">
+                {cat.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className={`text-xs font-medium px-3 py-1.5 rounded-full ${cat.color}`}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="max-w-5xl mx-auto px-6 py-12 border-t border-gray-800">
+        <h2 className="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-8">Experience</h2>
+        <div className="flex flex-col gap-10">
+          {experience.map((job) => (
+            <div key={job.title + job.period} className="flex gap-6">
+              <div className="flex flex-col items-center">
+                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
+                <div className="w-px flex-1 bg-gray-800 mt-2" />
+              </div>
+              <div className="pb-6 flex-1">
+                <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{job.title}</h3>
+                    <p className="text-cyan-400 text-sm">{job.company}</p>
+                  </div>
+                  <span className="text-xs text-gray-500 font-mono bg-gray-900 px-3 py-1 rounded-full border border-gray-800">
+                    {job.period}
+                  </span>
+                </div>
+                <ul className="space-y-2">
+                  {job.highlights.map((h, i) => (
+                    <li key={i} className="text-gray-400 text-sm leading-relaxed flex gap-2">
+                      <span className="text-cyan-600 mt-1 shrink-0">▸</span>
+                      {h}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
