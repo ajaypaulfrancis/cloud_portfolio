@@ -1,3 +1,4 @@
+import Image from "next/image";
 import VisitorCounter from "@/components/VisitorCounter";
 
 const certifications = [
@@ -175,6 +176,14 @@ export default function Home() {
 
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 py-20">
+        <div className="flex flex-col sm:flex-row gap-10 items-start">
+          <Image
+            src="/profile_pic_linked_in.jpeg"
+            alt="Ajay Paul"
+            width={140}
+            height={140}
+            className="rounded-full border-2 border-cyan-700 shrink-0"
+          />
         <div className="flex flex-col gap-4">
 <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
             Ajay <span className="text-cyan-400">Paul</span>
@@ -210,6 +219,7 @@ export default function Home() {
               aj@ajpaul.cloud
             </a>
           </div>
+        </div>
         </div>
       </section>
 
