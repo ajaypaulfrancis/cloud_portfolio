@@ -3,7 +3,10 @@ resource "aws_apigatewayv2_api" "visitor_api" {
   protocol_type = "HTTP"
 
   cors_configuration {
-    allow_origins = ["*"]
+    allow_origins = [
+      "https://ajpaul.cloud",
+      "https://portfolio.ajpaul.cloud"
+    ]
     allow_methods = ["GET"]
     allow_headers = ["content-type"]
   }
@@ -27,6 +30,11 @@ resource "aws_apigatewayv2_stage" "default" {
   api_id      = aws_apigatewayv2_api.visitor_api.id
   name        = "$default"
   auto_deploy = true
+
+  default_route_settings {
+    throttling_burst_limit = 10
+    throttling_rate_limit  = 5
+  }
 }
 
 resource "aws_lambda_permission" "api_gateway_permission" {
