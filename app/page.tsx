@@ -1,6 +1,8 @@
 import Image from "next/image";
 import VisitorCounter from "@/components/VisitorCounter";
 
+export const revalidate = 0;
+
 const certifications = [
   { name: "AWS Solutions Architect", abbr: "AWS SAA", color: "bg-orange-900/40 text-orange-300 border-orange-700" },
   { name: "Kubernetes Administrator", abbr: "CKA", color: "bg-blue-900/40 text-blue-300 border-blue-700" },
