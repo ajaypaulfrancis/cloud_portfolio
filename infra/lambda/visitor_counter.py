@@ -1,8 +1,9 @@
 import json
+import os
 import boto3
 
 dynamodb = boto3.resource("dynamodb")
-TABLE_NAME = "visitor_counter"
+TABLE_NAME = os.environ.get("TABLE_NAME", "visitor_counter")
 
 def lambda_handler(event, context):
     table = dynamodb.Table(TABLE_NAME)
@@ -25,7 +26,7 @@ def lambda_handler(event, context):
         "statusCode": 200,
         "headers": {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"
+            "Access-Control-Allow-Origin": "https://ajpaul.cloud"
         },
         "body": json.dumps({
             "count": count

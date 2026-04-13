@@ -8,6 +8,10 @@ resource "aws_dynamodb_table" "visitor_counter" {
     type = "S"
   }
 
+  server_side_encryption {
+    enabled = true
+  }
+
   tags = {
     Project = "cloud-portfolio"
   }
