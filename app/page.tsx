@@ -7,7 +7,7 @@ const certifications = [
   { name: "AWS Solutions Architect", abbr: "AWS SAA", color: "bg-orange-900/40 text-orange-300 border-orange-700" },
   { name: "Kubernetes Administrator", abbr: "CKA", color: "bg-blue-900/40 text-blue-300 border-blue-700" },
   { name: "Kubernetes App Developer", abbr: "CKAD", color: "bg-blue-900/40 text-blue-300 border-blue-700" },
-  { name: "Red Hat Ansible Specialist", abbr: "RHCA", color: "bg-red-900/40 text-red-300 border-red-700" },
+  { name: "Red Hat Openshift Specialist", abbr: "RHCA", color: "bg-red-900/40 text-red-300 border-red-700" },
   { name: "Terraform Associate", abbr: "Terraform", color: "bg-purple-900/40 text-purple-300 border-purple-700" },
   { name: "DevOps Foundation", abbr: "DOF", color: "bg-green-900/40 text-green-300 border-green-700" },
   { name: "ITIL Certified", abbr: "ITIL", color: "bg-teal-900/40 text-teal-300 border-teal-700" },
