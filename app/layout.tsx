@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ajay Paul | DevOps Lead",
+  title: "Ajay Paul | DevOps Lead Consultant",
   description: "9+ years of experience in cloud platforms, automation, and OpenShift. SME in Ansible, Terraform, AWS, and AI services.",
   keywords: ["DevOps", "Ansible", "OpenShift", "AWS", "Terraform", "Cloud", "Automation"],
   authors: [{ name: "Ajay Paul", url: "https://ajpaul.cloud" }],
