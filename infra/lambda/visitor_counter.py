@@ -5,8 +5,17 @@ import boto3
 dynamodb = boto3.resource("dynamodb")
 TABLE_NAME = os.environ.get("TABLE_NAME", "visitor_counter")
 
+ALLOWED_ORIGINS = {
+    "https://ajpaul.cloud",
+    "https://www.ajpaul.cloud",
+    "https://portfolio.ajpaul.cloud",
+}
+
 def lambda_handler(event, context):
     table = dynamodb.Table(TABLE_NAME)
+
+    origin = (event.get("headers") or {}).get("origin", "")
+    allow_origin = origin if origin in ALLOWED_ORIGINS else "https://ajpaul.cloud"
 
     response = table.update_item(
         Key={"site_id": "main"},
@@ -26,7 +35,7 @@ def lambda_handler(event, context):
         "statusCode": 200,
         "headers": {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://ajpaul.cloud"
+            "Access-Control-Allow-Origin": allow_origin,
         },
         "body": json.dumps({
             "count": count

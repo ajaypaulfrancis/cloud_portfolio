@@ -5,6 +5,7 @@ resource "aws_apigatewayv2_api" "visitor_api" {
   cors_configuration {
     allow_origins = [
       "https://ajpaul.cloud",
+      "https://www.ajpaul.cloud",
       "https://portfolio.ajpaul.cloud"
     ]
     allow_methods = ["GET"]
