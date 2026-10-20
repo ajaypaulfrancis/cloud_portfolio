@@ -24,9 +24,15 @@ const skillCategories = [
 
 const experience = [
   {
+    title: "DevOps Lead Consultant",
+    company: "Advent One",
+    period: "May 2026 – Present",
+    highlights: [],
+  },
+  {
     title: "DevOps Lead",
     company: "Cenitex",
-    period: "Jul 2023 – Present",
+    period: "Jul 2023 – May 2026",
     highlights: [
       "Led migration of Ansible Automation Platform (AAP) from on-premises to OpenShift on AWS — defined containerised architecture, security model, and operational standards",
       "Technical owner of enterprise automation platforms: AAP, Red Hat OpenShift (AWS), Terraform, Azure DevOps",
@@ -189,7 +195,7 @@ export default function Home() {
             Ajay <span className="text-cyan-400">Paul</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-400 font-light">
-            DevOps Lead · Cloud · Ansible · Automation
+            DevOps Lead Consultant · Virtualization · Migration · Automation
           </p>
           <p className="text-gray-500 max-w-2xl mt-2">
             9+ years delivering enterprise automation and cloud platforms across AWS, Azure, and OpenShift.
@@ -227,7 +233,7 @@ export default function Home() {
       <section id="about" className="max-w-5xl mx-auto px-6 py-12 border-t border-gray-800">
         <h2 className="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-6">About</h2>
         <p className="text-gray-300 text-lg leading-relaxed max-w-3xl">
-          Results-driven DevOps Lead with over 9 years of experience across cloud platforms (AWS, Azure)
+          Results-driven DevOps Lead Consultant with over 9 years of experience across cloud platforms (AWS, Azure)
           and Infrastructure as Code. Led automation initiatives on large-scale, multi-year projects,
           leveraging Ansible, Terraform, CloudFormation, Packer, and vRealize Automation. Proven track
           record of delivering high-impact solutions that enhance efficiency, scalability, and operational
