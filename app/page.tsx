@@ -27,7 +27,10 @@ const experience = [
     title: "DevOps Lead Consultant",
     company: "Advent One",
     period: "May 2026 – Present",
-    highlights: [],
+    highlights: [
+      "Migrating virtual machines from VMware to Red Hat OpenShift Virtualization for Kmart",
+      "Modernisation of Kmart NA servers",
+    ],
   },
   {
     title: "DevOps Lead",
